@@ -15,7 +15,7 @@ async def usit(e):
         f"**Hai {DEFAULTUSER} Kalo Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `.help` Atau Bisa Minta Bantuan Ke:\n"
         f"✣ **Group Support :** [UNREALBABIES](t.me/UnrealBabies)\n"
         f"✣ **Channel :** [Zelda Projects](t.me/zldprojects)\n"
-        f"✣ **Owner :** [Lord Zelda](t.me/UnrealZelda)\n"
+        f"✣ **Owner :** [Lord Zelda](t.me/UnrealZlda)\n"
         f"✣ **Repo :** [ZELDA USERBOT](https://github.com/fhmyngrh/ZeldaUbot)\n"
     )
 

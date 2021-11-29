@@ -60,7 +60,7 @@ async def help(event):
             event,
             f"**Daftar Perintah Untuk [ZELDA USERBOT](https://github.com/fhmyngrh/ZeldaUbot) :**\n\n"
             f"**Jumlah : ** `{len(modules)}` Modules\n"
-            f"**Owner : ** [Lord Zelda](https://t.me/UnrealZelda)\n\n"
+            f"**Owner : ** [Lord Zelda](https://t.me/UnrealZlda)\n\n"
             f"{HELP_TEXT}"
             f"\n\nJoin and Support @{CHANNEL}",
         )

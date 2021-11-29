@@ -52,7 +52,7 @@ async def mention(event):
 CMD_HELP.update(
     {
         "mentions": "**Plugin : **`Mentions users dengan nama kustom.`\
-        \n\n  •  **Syntax :** `Hi @UnrealZelda[Lord Zelda]`\
+        \n\n  •  **Syntax :** `Hi @UnrealZlda[Lord Zelda]`\
         \n  •  **Result : **Hi [Lord Zelda](tg://resolve?domain=mrismanaziz)\
     "
     }
