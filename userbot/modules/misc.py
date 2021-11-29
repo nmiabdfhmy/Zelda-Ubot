@@ -88,11 +88,11 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "**Berikut sesuatu untuk kamu baca:**\n"
-        "\n• [Userbot Repo](https://github.com/fhmyngrh/ZeldaUbot/blob/ZeldaUbot/README.md)"
-        "\n• [Video Tutorial](https://youtu.be/tTDaPKsGC1I)"
-        "\n• [List Variabel Heroku untuk ZELDA USERBOT](https://telegra.ph/List-Variabel-Heroku-untuk-ZELDA USERBOT-09-22)"
-        "\n• [Setup Guide - Basic](https://mrismanaziz.medium.com/cara-memasang-userbot-telegram-repo-man-userbot-deploy-di-heroku-c56d1f8b5537)"
-        "\n• [Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
+        "\nâ€¢ [Userbot Repo](https://github.com/fhmyngrh/ZeldaUbot/blob/ZeldaUbot/README.md)"
+        "\nâ€¢ [Video Tutorial](https://youtu.be/tTDaPKsGC1I)"
+        "\nâ€¢ [List Variabel Heroku untuk ZELDA USERBOT](https://telegra.ph/List-Variabel-Heroku-untuk-ZELDA USERBOT-09-22)"
+        "\nâ€¢ [Setup Guide - Basic](https://mrismanaziz.medium.com/cara-memasang-userbot-telegram-repo-man-userbot-deploy-di-heroku-c56d1f8b5537)"
+        "\nâ€¢ [Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
     )
 
 
@@ -116,11 +116,11 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         f"Hey, I am using **ZELDA USERBOT**\n\n"
         f" __Thanks For Using me__\n\n"
-        f"• **Userbot Version :** `{BOT_VER}@{UPSTREAM_REPO_BRANCH}`\n"
-        f"• **Group Support :** [UNREALBABIES](t.me/UnrealBabies)\n"
-        f"• **Channel Man :** [Zelda Projects](t.me/zldprojects)\n"
-        f"• **Owner Repo :** [Lord Zelda](t.me/UnrealZelda)\n"
-        f"• **Repo :** [ZELDA USERBOT](https://github.com/fhmyngrh/ZeldaUbot)\n"
+        f"â€¢ **Userbot Version :** `{BOT_VER}@{UPSTREAM_REPO_BRANCH}`\n"
+        f"â€¢ **Group Support :** [UNREALBABIES](t.me/UnrealBabies)\n"
+        f"â€¢ **Channel Man :** [Zelda Projects](t.me/zldprojects)\n"
+        f"â€¢ **Owner Repo :** [Lord Zelda](t.me/UnrealZelda)\n"
+        f"â€¢ **Repo :** [ZELDA USERBOT](https://github.com/fhmyngrh/ZeldaUbot)\n"
     )
 
 
@@ -128,7 +128,7 @@ async def repo_is_here(wannasee):
 async def repo_is_here(wannasee):
     """For .repo command, just returns the repo URL."""
     await wannasee.edit(
-        "• **GET STRING SESSION TELEGRAM :** [KLIK DISINI](https://repl.it/@mrismanaziz/stringenSession?lite=1&outputonly=1)\n"
+        "â€¢ **GET STRING SESSION TELEGRAM :** [KLIK DISINI](https://repl.it/@mrismanaziz/stringenSession?lite=1&outputonly=1)\n"
     )
 
 
@@ -296,8 +296,8 @@ async def send(event):
 CMD_HELP.update(
     {
         "send": f"**Plugin : **`send`\
-        \n\n  •  **Syntax :** `{cmd}send` <username/id>\
-        \n  •  **Function : **Meneruskan pesan balasan ke obrolan tertentu tanpa tag Forwarded from. Bisa mengirim ke Group Chat atau ke Personal Message\
+        \n\n  â€¢  **Syntax :** `{cmd}send` <username/id>\
+        \n  â€¢  **Function : **Meneruskan pesan balasan ke obrolan tertentu tanpa tag Forwarded from. Bisa mengirim ke Group Chat atau ke Personal Message\
     "
     }
 )
@@ -305,8 +305,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "random": f"**Plugin : **`random`\
-        \n\n  •  **Syntax :** `{cmd}random`\
-        \n  •  **Function : **Dapatkan item acak dari daftar item. \
+        \n\n  â€¢  **Syntax :** `{cmd}random`\
+        \n  â€¢  **Function : **Dapatkan item acak dari daftar item. \
     "
     }
 )
@@ -314,8 +314,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "sleep": f"**Plugin : **`sleep`\
-        \n\n  •  **Syntax :** `{cmd}sleep`\
-        \n  •  **Function : **Biarkan ZELDA USERBOT tidur selama beberapa detik \
+        \n\n  â€¢  **Syntax :** `{cmd}sleep`\
+        \n  â€¢  **Function : **Biarkan ZELDA USERBOT tidur selama beberapa detik \
     "
     }
 )
@@ -324,10 +324,10 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "repo": f"**Plugin : **`Repository ZELDA USERBOT`\
-        \n\n  •  **Syntax :** `{cmd}repo`\
-        \n  •  **Function : **Menampilan link Repository ZELDA USERBOT\
-        \n\n  •  **Syntax :** `{cmd}string`\
-        \n  •  **Function : **Menampilan link String ZELDA USERBOT\
+        \n\n  â€¢  **Syntax :** `{cmd}repo`\
+        \n  â€¢  **Function : **Menampilan link Repository ZELDA USERBOT\
+        \n\n  â€¢  **Syntax :** `{cmd}string`\
+        \n  â€¢  **Function : **Menampilan link String ZELDA USERBOT\
     "
     }
 )
@@ -336,8 +336,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "readme": f"**Plugin : **`Panduan Menggunakan userbot`\
-        \n\n  •  **Syntax :** `{cmd}readme`\
-        \n  •  **Function : **Menyediakan tautan untuk mengatur userbot dan modulnya\
+        \n\n  â€¢  **Syntax :** `{cmd}readme`\
+        \n  â€¢  **Function : **Menyediakan tautan untuk mengatur userbot dan modulnya\
     "
     }
 )
@@ -346,8 +346,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "restart": f"**Plugin : **`Restart ZELDA USERBOT`\
-        \n\n  •  **Syntax :** `{cmd}restart`\
-        \n  •  **Function : **Untuk Merestart userbot.\
+        \n\n  â€¢  **Syntax :** `{cmd}restart`\
+        \n  â€¢  **Function : **Untuk Merestart userbot.\
     "
     }
 )
@@ -356,8 +356,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "shutdown": f"**Plugin : **`shutdown`\
-        \n\n  •  **Syntax :** `{cmd}shutdown`\
-        \n  •  **Function : **Mematikan Userbot.\
+        \n\n  â€¢  **Syntax :** `{cmd}shutdown`\
+        \n  â€¢  **Function : **Mematikan Userbot.\
     "
     }
 )
@@ -366,8 +366,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "raw": f"**Plugin : **`raw`\
-        \n\n  •  **Syntax :** `{cmd}raw`\
-        \n  •  **Function : **Dapatkan data berformat seperti JSON terperinci tentang pesan yang dibalas.\
+        \n\n  â€¢  **Syntax :** `{cmd}raw`\
+        \n  â€¢  **Function : **Dapatkan data berformat seperti JSON terperinci tentang pesan yang dibalas.\
     "
     }
 )
@@ -376,8 +376,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "repeat": f"**Plugin : **`repeat`\
-        \n\n  •  **Syntax :** `{cmd}repeat`\
-        \n  •  **Function : **Mengulangi teks untuk beberapa kali. Jangan bingung ini dengan spam tho.\
+        \n\n  â€¢  **Syntax :** `{cmd}repeat`\
+        \n  â€¢  **Function : **Mengulangi teks untuk beberapa kali. Jangan bingung ini dengan spam tho.\
     "
     }
 )

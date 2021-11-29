@@ -216,42 +216,42 @@ async def _(event):
 CMD_HELP.update(
     {
         "war": f"**Plugin : **`war`\
-        \n\n  •  **Syntax :** `{cmd}jamet`\
-        \n  •  **Function : **Menghina Jamet telegram\
-        \n\n  •  **Syntax :** `{cmd}pp`\
-        \n  •  **Function : **Menghina Jamet telegram yang ga pake foto profil\
-        \n\n  •  **Syntax :** `{cmd}dp`\
-        \n  •  **Function : **Menghina Jamet muka hina!\
-        \n\n  •  **Syntax :** `{cmd}so`\
-        \n  •  **Function : **Ngeledek orang sokab\
-        \n\n  •  **Syntax :** `{cmd}nb`\
-        \n  •  **Function : **Ngeledek orang norak baru pake bot\
-        \n\n  •  **Syntax :** `{cmd}so`\
-        \n  •  **Function : **Ngeledek orang sokab\
-        \n\n  •  **Syntax :** `{cmd}skb`\
-        \n  •  **Function : **Ngeledek orang sokab versi 2\
-        \n\n  •  **Syntax :** `{cmd}met`\
-        \n  •  **Function : **Ngeledek si jamet caper\
-        \n\n  •  **Syntax :** `{cmd}war`\
-        \n  •  **Function : **Ngeledek orang so keras ngajak war\
-        \n\n  •  **Syntax :** `{cmd}wartai`\
-        \n  •  **Function : **Ngeledek orang so ketrigger ngajak cod minta sharelok\
-        \n\n  •  **Syntax :** `{cmd}kismin`\
-        \n  •  **Function : **Ngeledek orang kismin so jagoan di tele\
-        \n\n  •  **Syntax :** `{cmd}ded`\
-        \n  •  **Function : **Nyuruh orang mati aja goblok wkwk\
-        \n\n  •  **Syntax :** `{cmd}sokab`\
-        \n  •  **Function : **Ngeledek orang so kenal so dekat padahal kga kenal goblok\
-        \n\n  •  **Syntax :** `{cmd}gembel`\
-        \n  •  **Function : **Ngeledek bapaknya si jamet\
-        \n\n  •  **Syntax :** `{cmd}cuih`\
-        \n  •  **Function : **Ngeludahin keluarganya satu satu wkwk\
-        \n\n  •  **Syntax :** `{cmd}dih`\
-        \n  •  **Function : **Ngeledek anak haram\
-        \n\n  •  **Syntax :** `{cmd}gcs`\
-        \n  •  **Function : **Ngeledek gc sampah\
-        \n\n  •  **Syntax :** `{cmd}virtual`\
-        \n  •  **Function : **Ngeledek orang pacaran virtual\
+        \n\n  â€¢  **Syntax :** `{cmd}jamet`\
+        \n  â€¢  **Function : **Menghina Jamet telegram\
+        \n\n  â€¢  **Syntax :** `{cmd}pp`\
+        \n  â€¢  **Function : **Menghina Jamet telegram yang ga pake foto profil\
+        \n\n  â€¢  **Syntax :** `{cmd}dp`\
+        \n  â€¢  **Function : **Menghina Jamet muka hina!\
+        \n\n  â€¢  **Syntax :** `{cmd}so`\
+        \n  â€¢  **Function : **Ngeledek orang sokab\
+        \n\n  â€¢  **Syntax :** `{cmd}nb`\
+        \n  â€¢  **Function : **Ngeledek orang norak baru pake bot\
+        \n\n  â€¢  **Syntax :** `{cmd}so`\
+        \n  â€¢  **Function : **Ngeledek orang sokab\
+        \n\n  â€¢  **Syntax :** `{cmd}skb`\
+        \n  â€¢  **Function : **Ngeledek orang sokab versi 2\
+        \n\n  â€¢  **Syntax :** `{cmd}met`\
+        \n  â€¢  **Function : **Ngeledek si jamet caper\
+        \n\n  â€¢  **Syntax :** `{cmd}war`\
+        \n  â€¢  **Function : **Ngeledek orang so keras ngajak war\
+        \n\n  â€¢  **Syntax :** `{cmd}wartai`\
+        \n  â€¢  **Function : **Ngeledek orang so ketrigger ngajak cod minta sharelok\
+        \n\n  â€¢  **Syntax :** `{cmd}kismin`\
+        \n  â€¢  **Function : **Ngeledek orang kismin so jagoan di tele\
+        \n\n  â€¢  **Syntax :** `{cmd}ded`\
+        \n  â€¢  **Function : **Nyuruh orang mati aja goblok wkwk\
+        \n\n  â€¢  **Syntax :** `{cmd}sokab`\
+        \n  â€¢  **Function : **Ngeledek orang so kenal so dekat padahal kga kenal goblok\
+        \n\n  â€¢  **Syntax :** `{cmd}gembel`\
+        \n  â€¢  **Function : **Ngeledek bapaknya si jamet\
+        \n\n  â€¢  **Syntax :** `{cmd}cuih`\
+        \n  â€¢  **Function : **Ngeludahin keluarganya satu satu wkwk\
+        \n\n  â€¢  **Syntax :** `{cmd}dih`\
+        \n  â€¢  **Function : **Ngeledek anak haram\
+        \n\n  â€¢  **Syntax :** `{cmd}gcs`\
+        \n  â€¢  **Function : **Ngeledek gc sampah\
+        \n\n  â€¢  **Syntax :** `{cmd}virtual`\
+        \n  â€¢  **Function : **Ngeledek orang pacaran virtual\
         \n\n**Klo mau Req, kosa kata dari lu Bisa pake Module costum. Ketik** `{cmd}help costum`\
     "
     }

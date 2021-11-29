@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 # Recode by @mrismanaziz
-# FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
+# FROM ZELDA USERBOT <https://github.com/fhmyngrh/ZeldaUbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 #
 
