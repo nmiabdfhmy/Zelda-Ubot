@@ -52,7 +52,7 @@ async def gcast(event):
             except BaseException:
                 er += 1
     await kk.edit(
-        f"**✅ Berhasil Terkirim Ke {done} Group\n⛔ Gagal Mengirim Ke {er} Group"
+        f"✅ Berhasil Terkirim Ke {done} Group\n⛔ Gagal Mengirim Ke {er} Group"
     )
 
 
@@ -78,7 +78,7 @@ async def gucast(event):
             except BaseException:
                 er += 1
     await kk.edit(
-        f"**✅ Berhasil Terkirim Ke {done} Obrolan\n⛔ Gagal Mengirim Ke {er} Obrolan"
+        f"✅ Berhasil Terkirim Ke {done} Obrolan\n⛔ Gagal Mengirim Ke {er} Obrolan"
     )
 
 
