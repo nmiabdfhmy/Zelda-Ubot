@@ -43,9 +43,9 @@ async def logaddjoin(event):
         chat = f"[{chat.title}](https://t.me/c/{chat.id}/{event.action_message.id})"
     if event.user_added:
         tmp = event.added_by
-        text = f"ðŸ“© **#ADD_LOG\n •** {vcmention(tmp)} **Menambahkan** {vcmention(user)}\n **• Ke Group** {chat}"
+        text = f"ðŸ“© **#ADD_LOG\n â€¢** {vcmention(tmp)} **Menambahkan** {vcmention(user)}\n **â€¢ Ke Group** {chat}"
     elif event.user_joined:
-        text = f"ðŸ“¨ **#JOIN_LOG\n •** [{user.first_name}](tg://user?id={user.id}) **Bergabung\n • Ke Group** {chat}"
+        text = f"ðŸ“¨ **#JOIN_LOG\n â€¢** [{user.first_name}](tg://user?id={user.id}) **Bergabung\n â€¢ Ke Group** {chat}"
     else:
         return
     await event.client.send_message(BOTLOG_CHATID, text)
@@ -67,13 +67,13 @@ async def monito_p_m_s(event):
                     await LOG_CHATS_.NEWPM.edit(
                         LOG_CHATS_.NEWPM.text.replace(
                             "**ðŸ’Œ #NEW_MESSAGE**",
-                            f" • `{LOG_CHATS_.COUNT}` **Pesan**",
+                            f" â€¢ `{LOG_CHATS_.COUNT}` **Pesan**",
                         )
                     )
                     LOG_CHATS_.COUNT = 0
                 LOG_CHATS_.NEWPM = await event.client.send_message(
                     BOTLOG_CHATID,
-                    f"**ðŸ’Œ #MENERUSKAN #PESAN_BARU**\n** • Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** • User ID:** `{chat.id}`",
+                    f"**ðŸ’Œ #MENERUSKAN #PESAN_BARU**\n** â€¢ Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** â€¢ User ID:** `{chat.id}`",
                 )
             try:
                 if event.message:
@@ -105,14 +105,14 @@ async def log_tagged_messages(event):
     except Exception as e:
         LOGS.info(str(e))
     messaget = media_type(event)
-    resalt = f"<b>ðŸ“¨ #TAGS #MESSAGE</b>\n<b> • Dari : </b>{_format.htmlmentionuser(full.first_name , full.id)}"
+    resalt = f"<b>ðŸ“¨ #TAGS #MESSAGE</b>\n<b> â€¢ Dari : </b>{_format.htmlmentionuser(full.first_name , full.id)}"
     if full is not None:
-        resalt += f"\n<b> • Grup : </b><code>{hmm.title}</code>"
+        resalt += f"\n<b> â€¢ Grup : </b><code>{hmm.title}</code>"
     if messaget is not None:
-        resalt += f"\n<b> • Jenis Pesan : </b><code>{messaget}</code>"
+        resalt += f"\n<b> â€¢ Jenis Pesan : </b><code>{messaget}</code>"
     else:
-        resalt += f"\n<b> • ðŸ‘€ </b><a href = 'https://t.me/c/{hmm.id}/{event.message.id}'>Lihat Pesan</a>"
-    resalt += f"\n<b> • Message : </b>{event.message.message}"
+        resalt += f"\n<b> â€¢ ðŸ‘€ </b><a href = 'https://t.me/c/{hmm.id}/{event.message.id}'>Lihat Pesan</a>"
+    resalt += f"\n<b> â€¢ Message : </b>{event.message.message}"
     if not event.is_private:
         await event.client.send_message(
             BOTLOG_CHATID,
@@ -227,15 +227,15 @@ async def set_gruplog(event):
 CMD_HELP.update(
     {
         "log": f"**Plugin : **`log`\
-        \n\n  •  **Syntax :** `{cmd}save`\
-        \n  •  **Function : **__Untuk Menyimpan pesan yang ditandai ke grup pribadi.__\
-        \n\n  •  **Syntax :** `{cmd}log`\
-        \n  •  **Function : **__Untuk mengaktifkan Log Chat dari obrolan/grup itu.__\
-        \n\n  •  **Syntax :** `{cmd}nolog`\
-        \n  •  **Function : **__Untuk menonaktifkan Log Chat dari obrolan/grup itu.__\
-        \n\n  •  **Syntax :** `{cmd}pmlog on/off`\
-        \n  •  **Function : **__Untuk mengaktifkan atau menonaktifkan pencatatan pesan pribadi__\
-        \n\n  •  **Syntax :** `{cmd}gruplog on/off`\
-        \n  •  **Function : **__Untuk mengaktifkan atau menonaktifkan tag grup, yang akan masuk ke grup pmlogger.__"
+        \n\n  â€¢  **Syntax :** `{cmd}save`\
+        \n  â€¢  **Function : **__Untuk Menyimpan pesan yang ditandai ke grup pribadi.__\
+        \n\n  â€¢  **Syntax :** `{cmd}log`\
+        \n  â€¢  **Function : **__Untuk mengaktifkan Log Chat dari obrolan/grup itu.__\
+        \n\n  â€¢  **Syntax :** `{cmd}nolog`\
+        \n  â€¢  **Function : **__Untuk menonaktifkan Log Chat dari obrolan/grup itu.__\
+        \n\n  â€¢  **Syntax :** `{cmd}pmlog on/off`\
+        \n  â€¢  **Function : **__Untuk mengaktifkan atau menonaktifkan pencatatan pesan pribadi__\
+        \n\n  â€¢  **Syntax :** `{cmd}gruplog on/off`\
+        \n  â€¢  **Function : **__Untuk mengaktifkan atau menonaktifkan tag grup, yang akan masuk ke grup pmlogger.__"
     }
 )
