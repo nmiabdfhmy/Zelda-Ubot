@@ -157,7 +157,7 @@ async def bot_ver(event):
 
         await edit_or_reply(
             event,
-            "âœ¥ **Userbot Versi :** " f"`{verout}`" "\nâœ¥ **Revisi :** " f"`{revout}`",
+            "✥ **Userbot Versi :** " f"`{verout}`" "\n✥ **Revisi :** " f"`{revout}`",
         )
     else:
         await edit_or_reply(
