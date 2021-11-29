@@ -15,7 +15,7 @@ from telethon.tl.types import Channel
 import userbot.modules.sql_helper.gban_sql as gban_sql
 from userbot import BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP, DEVS, bot
+from userbot import CMD_HELP, DEVS, ALIVE_NAME, bot
 from userbot.events import register
 from userbot.utils import edit_or_reply, get_user_from_event, zelda_cmd
 
@@ -44,7 +44,7 @@ def mentionuser(name, userid):
 async def gban(event):
     if event.fwd_from:
         return
-    gbun = await edit_or_reply(event, "`Gbanning...`")
+    gbun = await edit_or_reply(event, "`Memproses Global Ban...`")
     start = datetime.now()
     user, reason = await get_user_from_event(event, gbun)
     if not user:
@@ -69,7 +69,7 @@ async def gban(event):
         await gbun.edit("**Anda Tidak mempunyai GC yang anda admin 🥺**")
         return
     await gbun.edit(
-        f"**initiating gban of the** [Jamet](tg://user?id={user.id}) **in** `{len(san)}` **groups**"
+        f"**Memulai Global Ban** [Si Jamet](tg://user?id={user.id}) **dari** `{len(san)}` **Groups**"
     )
     for i in range(fiz):
         try:
@@ -85,11 +85,22 @@ async def gban(event):
     timetaken = (end - start).seconds
     if reason:
         await gbun.edit(
-            f"**GBanned** [{user.first_name}](tg://user?id={user.id}) **in** `{count}` **groups in** `{timetaken}` **seconds**!!\n**Reason :** `{reason}`"
+            f"**Added to GBAN List by {ALIVE_NAME}**\n"
+            f"`Name        :` [{user.first_name}](tg://user?id={user.id})\n"
+            f"`From        :` {count} Groups\n"
+            f"`Taking Time :` {timetaken} Seconds\n"
+            f"`Reason      :` {reason}\n"
+            f"`Status      :` Success Banned\n"
+            f"#ZELDAUSERBOT"
         )
     else:
         await gbun.edit(
-            f"**GBanned** [{user.first_name}](tg://user?id={user.id}) **in** `{count}` **groups in** `{timetaken}` **seconds**!!\n**Added to gbanlist.**"
+            f"**Added to GBAN List by {ALIVE_NAME}**\n"
+            f"`Name        :` [{user.first_name}](tg://user?id={user.id})\n"
+            f"`From        :` {count} Groups\n"
+            f"`Taking Time :` {timetaken} Seconds\n"
+            f"`Status      :` Success Banned\n"
+            f"#ZELDAUSERBOT"
         )
 
 
@@ -98,7 +109,7 @@ async def gban(event):
 async def ungban(event):
     if event.fwd_from:
         return
-    ungbun = await edit_or_reply(event, "`UnGbanning...`")
+    ungbun = await edit_or_reply(event, "`Membatalkan Global Ban...`")
     start = datetime.now()
     user, reason = await get_user_from_event(event, ungbun)
     if not user:
@@ -118,7 +129,7 @@ async def ungban(event):
         await ungbun.edit("**Anda Tidak mempunyai GC yang anda admin 🥺**")
         return
     await ungbun.edit(
-        f"**initiating ungban of the** [Jamet](tg://user?id={user.id}) **in** `{len(san)}` **groups**"
+        f"**Memulai pembatalan Global Ban** [Si Jamet](tg://user?id={user.id}) **dari** `{len(san)}` **Groups**"
     )
     for i in range(fiz):
         try:
@@ -134,11 +145,22 @@ async def ungban(event):
     timetaken = (end - start).seconds
     if reason:
         await ungbun.edit(
-            f"**Ungbanned** [{user.first_name}](tg://user?id={user.id}`) **in** `{count}` **groups in** `{timetaken}` **seconds**!!\n**Reason :** `{reason}`"
+            f"**Removed from GBAN List by {ALIVE_NAME}**\n"
+            f"`Name        :` [{user.first_name}](tg://user?id={user.id})\n"
+            f"`From        :` {count} Groups\n"
+            f"`Taking Time :` {timetaken} Seconds\n"
+            f"`Reason      :` {reason}\n"
+            f"`Status      :` Success Ubanned\n"
+            f"#ZELDAUSERBOT"
         )
     else:
         await ungbun.edit(
-            f"**Ungbanned** [{user.first_name}](tg://user?id={user.id}) **in** `{count}` **groups in** `{timetaken}` **seconds**!!\n**Removed from gbanlist**"
+            f"**Removed from GBAN List by {ALIVE_NAME}**\n"
+            f"`Name        :` [{user.first_name}](tg://user?id={user.id})\n"
+            f"`From        :` {count} Groups\n"
+            f"`Taking Time :` {timetaken} Seconds\n"
+            f"`Status      :` Success Unbanned\n"
+            f"#ZELDAUSERBOT"
         )
 
 
