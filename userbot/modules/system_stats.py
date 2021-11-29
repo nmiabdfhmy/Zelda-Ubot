@@ -179,7 +179,7 @@ async def amireallyalive(alive):
     await alive.edit("⚡")
     await asyncio.sleep(2)
     output = (
-        f"**[ZELDA USERBOT](https://github.com/fhmyngrh/ZeldaUbot) by [LORD ZELDA](https://t.me/UnrealZelda)**\n\n"
+        f"[**ZELDA USERBOT**](https://github.com/fhmyngrh/ZeldaUbot) by [**LORD ZELDA**](https://t.me/UnrealZelda)\n\n"
         f"Program is alive! Bot is ready to use\n\n"
         f"    ◉ **Master :** [{user.first_name}](tg://user?id={user.id}) \n"
         f"    ◉ **Modules :** `{len(modules)} Modules` \n"
@@ -188,7 +188,7 @@ async def amireallyalive(alive):
         f"    ◉ **Pytgcalls Version :** `{pytgcalls.__version__}` \n"
         f"    ◉ **Telethon Version :** `{version.__version__}` \n"
         f"    ◉ **Bot Uptime :** `{uptime}` \n\n"
-        f"**[Group Chat](https://t.me/{GROUP})** | **[CHANNEL](https://t.me/{CHANNEL})**"
+        f"[**Group Chat**](https://t.me/{GROUP}) | [**Channel**](https://t.me/{CHANNEL})"
     )
     if ALIVE_LOGO:
         try:
