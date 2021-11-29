@@ -27,7 +27,7 @@ DEF_UNAPPROVED_MSG = (
     "• Dilarang Spam Chat\n"
     "• 5x Spam Chat, Bot akan otomatis memblokir\n"
     "• Subs Channel @zldprojects\n\n"
-    "🚀  ZELDA USERBOT")
+    "🚀  ZELDA USERBOT"
 )
 # =================================================================
 
