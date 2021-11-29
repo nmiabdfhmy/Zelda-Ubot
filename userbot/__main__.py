@@ -58,7 +58,7 @@ async def man_userbot_on():
     except Exception as e:
         LOGS.info(str(e))
     try:
-        await bot(JoinChannelRequest("@zldprojects"))
+        await bot(JoinChannelRequest("@ZeldaProjects"))
     except BaseException:
         pass
     try:

@@ -142,7 +142,7 @@ GCAST_BL = int(os.environ.get("GCAST_BL") or 0)
 
 # Support
 GROUP = os.environ.get("GROUP", "UnrealBabies")
-CHANNEL = os.environ.get("CHANNEL", "zldprojects")
+CHANNEL = os.environ.get("CHANNEL", "ZeldaProjects")
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
