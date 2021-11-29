@@ -157,7 +157,7 @@ async def bot_ver(event):
 
         await edit_or_reply(
             event,
-            "Ã¢Å“Â¥ **Userbot Versi :** " f"`{verout}`" "\nÃ¢Å“Â¥ **Revisi :** " f"`{revout}`",
+            "âœ¥ **Userbot Versi :** " f"`{verout}`" "\nâœ¥ **Revisi :** " f"`{revout}`",
         )
     else:
         await edit_or_reply(
@@ -176,18 +176,18 @@ async def amireallyalive(alive):
     await alive.edit("__Connecting...__")
     await alive.edit("__Connecting..__")
     await alive.edit("__Connecting...__")
-    await alive.edit("âš¡")
+    await alive.edit("")
     await asyncio.sleep(2)
     output = (
         f"**[ZELDA USERBOT](https://github.com/fhmyngrh/ZeldaUbot) by [LORD ZELDA](https://t.me/UnrealZelda)**\n\n"
         f"**Program is alive! Bot is ready to use**\n\n"
-        f"    â€¢ **Master :** [{user.first_name}](tg://user?id={user.id}) \n"
-        f"    â€¢ **Modules :** `{len(modules)} Modules` \n"
-        f"    â€¢ **Bot Version :** `{BOT_VER}` \n"
-        f"    â€¢ **Python Version :** `{python_version()}` \n"
-        f"    â€¢ **Pytgcalls Version :** `{pytgcalls.__version__}` \n"
-        f"    â€¢ **Telethon Version :** `{version.__version__}` \n"
-        f"    â€¢ **Bot Uptime :** `{uptime}` \n\n"
+        f"    • **Master :** [{user.first_name}](tg://user?id={user.id}) \n"
+        f"    • **Modules :** `{len(modules)} Modules` \n"
+        f"    • **Bot Version :** `{BOT_VER}` \n"
+        f"    • **Python Version :** `{python_version()}` \n"
+        f"    • **Pytgcalls Version :** `{pytgcalls.__version__}` \n"
+        f"    • **Telethon Version :** `{version.__version__}` \n"
+        f"    • **Bot Uptime :** `{uptime}` \n\n"
         f"**[Group Chat](https://t.me/{GROUP})** | **[CHANNEL](https://t.me/{CHANNEL})**"
     )
     if ALIVE_LOGO:
@@ -211,14 +211,14 @@ async def amireallyalive(alive):
 CMD_HELP.update(
     {
         "system": f"**Plugin : **`system`.\
-        \n\n  â€¢  **Syntax :** `{cmd}sysinfo`\
-        \n  â€¢  **Function : **Informasi sistem menggunakan neofetch mengirim sebagai gambar.\
-        \n\n  â€¢  **Syntax :** `{cmd}sysd`\
-        \n  â€¢  **Function : **Informasi sistem menggunakan neofetch.\
-        \n\n\n  â€¢  **Syntax :** `{cmd}botver`\
-        \n  â€¢  **Function : **Menampilkan versi userbot.\
-        \n\n  â€¢  **Syntax :** `{cmd}spc`\
-        \n  â€¢  **Function : **Menampilkan spesifikasi sistem secara lengkap.\
+        \n\n  •  **Syntax :** `{cmd}sysinfo`\
+        \n  •  **Function : **Informasi sistem menggunakan neofetch mengirim sebagai gambar.\
+        \n\n  •  **Syntax :** `{cmd}sysd`\
+        \n  •  **Function : **Informasi sistem menggunakan neofetch.\
+        \n\n\n  •  **Syntax :** `{cmd}botver`\
+        \n  •  **Function : **Menampilkan versi userbot.\
+        \n\n  •  **Syntax :** `{cmd}spc`\
+        \n  •  **Function : **Menampilkan spesifikasi sistem secara lengkap.\
     "
     }
 )
@@ -227,8 +227,8 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "alive": f"**Plugin : **`alive`\
-        \n\n  â€¢  **Syntax :** `{cmd}alive` atau `{cmd}on`\
-        \n  â€¢  **Function : **Untuk melihat apakah bot Anda berfungsi atau tidak.\
+        \n\n  •  **Syntax :** `{cmd}alive` atau `{cmd}on`\
+        \n  •  **Function : **Untuk melihat apakah bot Anda berfungsi atau tidak.\
     "
     }
 )
