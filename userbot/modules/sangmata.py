@@ -18,7 +18,7 @@ from userbot.utils import (
 )
 
 
-@zelda_cmd(pattern="sg(u)?(?:\s|$)([\s\S]*)")
+@zelda_cmd(pattern="sa(u)?(?:\s|$)([\s\S]*)")
 async def _(event):
     "To get name/username history."
     input_str = "".join(event.text.split(maxsplit=1)[1:])
