@@ -107,14 +107,14 @@ async def change_title(e):
 CMD_HELP.update(
     {
         "vcg": f"**Plugin : **`vcg`\
-        \n\n • **Syntax :** `{cmd}startos`\
-        \n • **Function : **Untuk Memulai voice chat group\
-        \n\n • **Syntax :** `{cmd}stopos`\
-        \n • **Function : **Untuk Memberhentikan voice chat group\
-        \n\n • **Syntax :** `{cmd}ostitle` <title vcg>\
-        \n • **Function : **Untuk Mengubah title/judul voice chat group\
-        \n\n • **Syntax :** `{cmd}culikos`\
-        \n • **Function : **Mengundang Member group ke voice chat group\
+        \n\n â€¢ **Syntax :** `{cmd}startos`\
+        \n â€¢ **Function : **Untuk Memulai voice chat group\
+        \n\n â€¢ **Syntax :** `{cmd}stopos`\
+        \n â€¢ **Function : **Untuk Memberhentikan voice chat group\
+        \n\n â€¢ **Syntax :** `{cmd}ostitle` <title vcg>\
+        \n â€¢ **Function : **Untuk Mengubah title/judul voice chat group\
+        \n\n â€¢ **Syntax :** `{cmd}culikos`\
+        \n â€¢ **Function : **Mengundang Member group ke voice chat group\
     "
     }
 )
