@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 #
 # Recode by @mrismanaziz
-# FROM ZELDA USERBOT <https://github.com/fhmyngrh/ZeldaUbot>
+# FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 #
 
@@ -68,13 +68,13 @@ async def last_fm(lastFM):
         if image:
             output = (
                 f"[â€Ž]({image})[{LASTFM_USERNAME}]({username}) __is now listening to:"
-                f"__\n\n• [{playing}]({rectrack})\n`{tags}`"
+                f"__\n\nâ€¢ [{playing}]({rectrack})\n`{tags}`"
             )
             preview = True
         else:
             output = (
                 f"[{LASTFM_USERNAME}]({username}) __is now listening to:"
-                f"__\n\n• [{playing}]({rectrack})\n`{tags}`"
+                f"__\n\nâ€¢ [{playing}]({rectrack})\n`{tags}`"
             )
     else:
         recent = User(LASTFM_USERNAME, lastfm).get_recent_tracks(limit=5)
@@ -89,7 +89,7 @@ async def last_fm(lastFM):
                 return await lastFM.edit(f"**{err}**")
             rectrack = parse.quote(str(printable))
             rectrack = sub("^", "https://open.spotify.com/search/", rectrack)
-            output += f"• [{printable}]({rectrack})\n"
+            output += f"â€¢ [{printable}]({rectrack})\n"
             if tags:
                 output += f"`{tags}`\n\n"
     if preview is not None:
@@ -253,12 +253,12 @@ async def lastlog(lstlog):
 CMD_HELP.update(
     {
         "lastfm": f"**Plugin : **`lastfm`\
-        \n\n  •  **Syntax :** `{cmd}lastfm`\
-        \n  •  **Function : **Menampilkan trek scrobbling saat ini atau scrobble terbaru jika tidak ada yang diputar.\
-        \n\n  •  **Syntax :** `{cmd}lastbio` <on/off>\
-        \n  •  **Function : **Mengaktifkan / Menonaktifkan pemutaran last.fm saat ini ke bio.\
-        \n\n  •  **Syntax :** `{cmd}lastlog` <on/off>\
-        \n  •  **Function : **Mengaktifkan / Menonaktifkan bio logging last.fm di grup bot-log.\
+        \n\n  â€¢  **Syntax :** `{cmd}lastfm`\
+        \n  â€¢  **Function : **Menampilkan trek scrobbling saat ini atau scrobble terbaru jika tidak ada yang diputar.\
+        \n\n  â€¢  **Syntax :** `{cmd}lastbio` <on/off>\
+        \n  â€¢  **Function : **Mengaktifkan / Menonaktifkan pemutaran last.fm saat ini ke bio.\
+        \n\n  â€¢  **Syntax :** `{cmd}lastlog` <on/off>\
+        \n  â€¢  **Function : **Mengaktifkan / Menonaktifkan bio logging last.fm di grup bot-log.\
     "
     }
 )
