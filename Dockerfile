@@ -1,4 +1,4 @@
-FROM fhmyngrh/zeldaubot:buster
+FROM mrismanaziz/man-userbot:buster
 
 RUN git clone -b ZeldaUbot https://github.com/fhmyngrh/ZeldaUbot /home/zeldaubot/ \
     && chmod 777 /home/zeldaubot \
