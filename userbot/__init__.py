@@ -203,13 +203,13 @@ ALIVE_TEKS_CUSTOM = os.environ.get("ALIVE_TEKS_CUSTOM", "Hey, I am alive.")
 ALIVE_NAME = os.environ.get("ALIVE_NAME", "Zelda")
 
 # Custom Emoji Alive
-ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "ï")
+ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "‚ö°")
 
 # Custom Emoji Alive
-INLINE_EMOJI = os.environ.get("INLINE_EMOJI", "ï")
+INLINE_EMOJI = os.environ.get("INLINE_EMOJI", "‚≠ê")
 
 # Custom icon HELP
-ICON_HELP = os.environ.get("ICON_HELP", "ï")
+ICON_HELP = os.environ.get("ICON_HELP", "‚Ä¢")
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", "ID"))
@@ -434,11 +434,11 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "´", data="{}_prev({})".format(prefix, modulo_page)
+                    "¬´", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline("Tutup", b"close"),
                 custom.Button.inline(
-                    "ª", data="{}_next({})".format(prefix, modulo_page)
+                    "¬ª", data="{}_next({})".format(prefix, modulo_page)
                 ),
             )
         ]
@@ -534,7 +534,7 @@ with bot:
                 result = builder.photo(
                     file=logoman,
                     link_preview=False,
-                    text=f"**ï ZELDA USERBOT Inline Menu ï**\n\nï **Owner** [{user.first_name}](tg://user?id={user.id})\nï **Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**‚Ä¢ ZELDA USERBOT Inline Menu ‚Ä¢**\n\n‚Ä¢ **Owner** [{user.first_name}](tg://user?id={user.id})\n‚Ä¢ **Jumlah** `{len(dugmeler)}` Modules",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -543,7 +543,7 @@ with bot:
                     description="Repository ZELDA USERBOT",
                     url="https://t.me/zldprojects",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text="**ZELDA USERBOT**\nï **Owner Repo :** [Lord Zelda](https://t.me/UnrealZelda)\nï **Support :** @zldprojects\nï **Repository :** [ZELDA USERBOT](https://github.com/fhmyngrh/ZeldaUbot)",
+                    text="**ZELDA USERBOT**\n‚Ä¢ **Owner Repo :** [Lord Zelda](https://t.me/UnrealZelda)\n‚Ä¢ **Support :** @zldprojects\n‚Ä¢ **Repository :** [ZELDA USERBOT](https://github.com/fhmyngrh/ZeldaUbot)",
                     buttons=[
                         [
                             custom.Button.url("GROUP CHAT", "https://t.me/UnrealBabies"),
@@ -556,11 +556,11 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="ï ZELDA USERBOT ï",
+                    title="‚Ä¢ ZELDA USERBOT ‚Ä¢",
                     description="ZELDA USERBOT | Telethon",
                     url="https://t.me/zldprojects",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text=f"**ZELDA USERBOT**\nï **UserMode:** [{user.first_name}](tg://user?id={user.id})\nï **Assistant:** {tgbotusername}\n**Support:** @zldprojects",
+                    text=f"**ZELDA USERBOT**\n‚Ä¢ **UserMode:** [{user.first_name}](tg://user?id={user.id})\n‚Ä¢ **Assistant:** {tgbotusername}\n**Support:** @zldprojects",
                     buttons=[
                         [
                             custom.Button.url("GROUP CHAT", "https://t.me/UnrealBabies"),
@@ -580,7 +580,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"**ï ZELDA USERBOT Inline Menu ï**\n\nï **Owner** [{user.first_name}](tg://user?id={user.id})\nï **Jumlah** `{len(dugmeler)}` Modules"
+                text = f"**‚Ä¢ ZELDA USERBOT Inline Menu ‚Ä¢**\n\n‚Ä¢ **Owner** [{user.first_name}](tg://user?id={user.id})\n‚Ä¢ **Jumlah** `{len(dugmeler)}` Modules"
                 await event.edit(
                     text,
                     file=logoman,
@@ -673,7 +673,7 @@ with bot:
         LOGS.info(
             "Help Mode Inline Bot Mu Tidak aktif. Tidak di aktifkan juga tidak apa-apa. "
             "Untuk Mengaktifkannya Buat bot di @BotFather Lalu Tambahkan var BOT_TOKEN dan BOT_USERNAME. "
-            "Pergi Ke @BotFather lalu settings bot ¬ª Pilih mode inline ¬ª Turn On. "
+            "Pergi Ke @BotFather lalu settings bot √Ç¬ª Pilih mode inline √Ç¬ª Turn On. "
         )
     try:
         bot.loop.run_until_complete(check_botlog_chatid())
