@@ -62,15 +62,15 @@ async def _(ping):
     await xx.edit("**••**")
     await xx.edit("**•••**")
     await xx.edit("**••••**")
-    await xx.edit("**⚡**")
+    await xx.edit("⚡")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await bot.get_me()
     await xx.edit(
         f"**ZELDA USERBOT**\n"
-        f"• **Pinger** - `%sms`\n"
-        f"• **Uptime -** `{uptime}` \n"
-        f"**• Lord :** [{user.first_name}](tg://user?id={user.id})" % (duration)
+        f"• `Ping    :` - `%sms`\n"
+        f"• `Uptime  :` - `{uptime}` \n"
+        f"• `Lord    :` [{user.first_name}](tg://user?id={user.id})" % (duration)
     )
 
 
