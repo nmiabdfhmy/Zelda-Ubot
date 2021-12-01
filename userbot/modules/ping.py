@@ -68,8 +68,8 @@ async def _(ping):
     user = await bot.get_me()
     await xx.edit(
         f"**ZELDA USERBOT**\n"
-        f"• `Ping    :` - `%sms`\n"
-        f"• `Uptime  :` - `{uptime}` \n"
+        f"• `Ping    :` `%sms`\n"
+        f"• `Uptime  :` `{uptime}` \n"
         f"• `Lord    :` [{user.first_name}](tg://user?id={user.id})" % (duration)
     )
 
