@@ -97,7 +97,9 @@ DEVS = [
     1977120689,
 ]
 
-SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "1977120689").split()}
+SUDO_USERS = [
+    1977120689,
+]
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
 
 # For Blacklist Group Support
