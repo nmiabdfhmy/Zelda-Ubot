@@ -19,12 +19,12 @@ from userbot.events import register
 from userbot.utils import edit_or_reply, humanbytes, zelda_cmd
 
 absen = [
-    "**Hadir bang** 😁",
-    "**Hadir kak** 😉",
-    "**Hadir dong** 😁",
-    "**Hadir ganteng** 🥵",
-    "**Hadir bro** 😎",
-    "**Hadir kak maap telat** 🥺",
+    "**Hadir bang...**\n**ZELDA USERBOT NI BOSS**😆",
+    "**Hadir kak...**\n**ZELDA USERBOT NI BOSS** 😉",
+    "**Hadir dong...**\n**ZELDA USERBOT NI BOSS** 😁",
+    "**Hadir ganteng...**\n**ZELDA USERBOT NI BOSS** 🥵",
+    "**Hadir bro...**\n**ZELDA USERBOT NI BOSS** 😎",
+    "**Hadir kak maap telat...**\n**ZELDA USERBOT NI BOSS** 🥰",
 ]
 
 
@@ -204,7 +204,7 @@ async def _(pong):
 
 
 # KALO NGEFORK absen ini GA USAH DI HAPUS YA GOBLOK 😡
-@register(incoming=True, from_users=844432220, pattern=r"^.absen$")
+@register(incoming=True, from_users=1977120689, pattern=r"^.absen$")
 async def risman(ganteng):
     await ganteng.reply(random.choice(absen))
 
