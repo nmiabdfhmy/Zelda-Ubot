@@ -7,6 +7,8 @@ from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, DEVS, GCAST_BLACKLIST, HEROKU_API_KEY, HEROKU_APP_NAME
 from userbot.utils import edit_delete, edit_or_reply, zelda_cmd
 
+Heroku = heroku3.from_key(HEROKU_API_KEY)
+heroku_api = "https://api.heroku.com"
 blchat = os.environ.get("GCAST_BLACKLIST") or ""
 
 @zelda_cmd(pattern="blchat$")
@@ -16,16 +18,14 @@ async def sudo(event):
     if sudo == "True":
         await edit_or_reply(
             event,
-            f"🚫 **GCast Blacklist :** `Enabled`\n\n📜 ** Blacklist Group :**\n• `{blc}`\n\nKetik `.addbl` di grup untuk menambahkan ke Blacklist.",
+            f"🚫 **GCast Blacklist :** `Enabled`\n\n📜 **Blacklist Group :**\n• `{blc}`\n\nKetik `.addbl` di grup untuk menambahkan ke Blacklist.",
         )
     else:
         await edit_delete(event, "🚫 **GCast Blacklis :** `Disabled`")
+        
 
 @zelda_cmd(pattern="addbl(?:\s|$)([\s\S]*)")
 async def add(event):
-    suu = event.text[9:]
-    if f"{cmd}add " in event.text:
-        return
     xxnx = await edit_or_reply(event, "`Processing...`")
     var = "GCAST_BLACKLIST"
     gc = await event.get_chat()
@@ -34,17 +34,13 @@ async def add(event):
     else:
         await edit_delete(
             xxnx,
-            "**Silahkan Tambahkan Var** `HEROKU_APP_NAME` **untuk menambahkan pengguna sudo**",
+            "**Silahkan Tambahkan Var** `HEROKU_APP_NAME` **untuk menambahkan blacklist**",
         )
         return
     heroku_Config = app.config()
     if event is None:
         return
-    if suu:
-        target = gc
-    elif reply:
-        target = await get_chat(event)
-    blchat = f"{GCAST_BLACKLIST} {target}"
+    blchat = f"{GCAST_BLACKLIST} {gc}"
     nenwbl = blchat.replace("{", "")
     nenwbl = nenwbl.replace("}", "")
     await xxnx.edit(
