@@ -1,22 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2020 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
-#
-# Ported by Koala @manusiarakitann
-# Recode by @mrismanaziz
-# FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
-# t.me/SharingUserbot & t.me/Lunatic0de
-
 import asyncio
-import os
 
 from telethon.errors import FloodWaitError
 
 from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP, DEVS, GCAST_BLACKLIST
+from userbot import CMD_HELP, DEVS, GCAST_BLACKLIST, HEROKU_API_KEY, HEROKU_APP_NAME
 from userbot.utils import edit_delete, edit_or_reply, zelda_cmd
 
 blchat = os.environ.get("GCAST_BLACKLIST") or ""
