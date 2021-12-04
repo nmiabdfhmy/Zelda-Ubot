@@ -44,7 +44,7 @@ async def add(event):
     nenwbl = blchat.replace("{", "")
     nenwbl = nenwbl.replace("}", "")
     await xxnx.edit(
-        f"**Berhasil Menambahkan** `{target}` **ke GCast Blacklist.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
+        f"**Berhasil Menambahkan** `{gc}` **ke GCast Blacklist.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
     )
     heroku_Config[var] = nenwbl
 
