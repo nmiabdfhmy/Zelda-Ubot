@@ -29,7 +29,7 @@ async def _(event):
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=1031952739)
             )
-            first = await conv.send_message(f"/qcolor white")
+            # first = await conv.send_message(f"/qcolor {warna}")
             ok = await conv.get_response()
             await asyncio.sleep(2)
             second = await bot.forward_messages(chat, reply_message)
@@ -44,7 +44,7 @@ async def _(event):
         else:
             await event.delete()
             await bot.forward_messages(event.chat_id, response.message)
-    await bot.delete_messages(conv.chat_id, [first.id, ok.id, second.id, response.id])
+    await bot.delete_messages(conv.chat_id, [ok.id, second.id, response.id])
 
 
 CMD_HELP.update(
