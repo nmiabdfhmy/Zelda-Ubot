@@ -102,6 +102,9 @@ SUDO_USERS = [
 ]
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
 
+# Gcast Blacklist
+GCAST_BLACKLIST = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
+
 # For Blacklist Group Support
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 if not BLACKLIST_CHAT:
