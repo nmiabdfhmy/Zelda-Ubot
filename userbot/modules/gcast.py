@@ -5,7 +5,7 @@ import heroku3
 from telethon.errors import FloodWaitError
 
 from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP, DEVS, GCAST_BLACKLIST, HEROKU_API_KEY, HEROKU_APP_NAME
+from userbot import CMD_HELP, DEVS, HEROKU_API_KEY, HEROKU_APP_NAME, GCAST_BLACKLIST
 from userbot.utils import edit_delete, edit_or_reply, zelda_cmd
 
 Heroku = heroku3.from_key(HEROKU_API_KEY)
@@ -53,9 +53,8 @@ async def add(event):
 @zelda_cmd(pattern="delbl(?:\s|$)([\s\S]*)")
 async def _(event):
 	xxx = await edit_or_reply(event, "`Processing...`")
-	gc = await event.get_chat_id()
 	if HEROKU_APP_NAME is not None:
-        app = Heroku.app(HEROKU_APP_NAME)
+        # app = Heroku.app(HEROKU_APP_NAME)
     else:
         await edit_delete(
             xxx,
@@ -65,6 +64,7 @@ async def _(event):
     heroku_Config = app.config()
     if event is None:
         return
+    gc = await event.get_chat_id()
     gett = str(gc)
     if gett in blchat:
         nenwbl = blchat.replace(gett, "")
