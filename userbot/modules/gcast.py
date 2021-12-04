@@ -11,6 +11,7 @@
 # t.me/SharingUserbot & t.me/Lunatic0de
 
 import asyncio
+import os
 
 from telethon.errors import FloodWaitError
 
