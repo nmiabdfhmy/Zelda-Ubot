@@ -15,7 +15,7 @@ async def sudo(event):
     if sudo == "True":
         await edit_or_reply(
             event,
-            f"🚫 **GCast Blacklist :** `Enabled`\n\n📜 ** Blacklist Group :**\n• `{blc}`\n\n**Kitik `.addbl` di grup untuk menambahkan ke Blacklist.",
+            f"🚫 **GCast Blacklist :** `Enabled`\n\n📜 ** Blacklist Group :**\n• `{blc}`\n\n**Ketik `.addbl` di grup untuk menambahkan ke Blacklist.",
         )
     else:
         await edit_delete(event, "🚫 **GCast Blacklis :** `Disabled`")
