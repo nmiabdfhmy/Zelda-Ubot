@@ -15,25 +15,53 @@ import asyncio
 from telethon.errors import FloodWaitError
 
 from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP, DEVS
+from userbot import CMD_HELP, DEVS, GCAST_BLACKLIST
 from userbot.utils import edit_delete, edit_or_reply, zelda_cmd
 
-GCAST_BLACKLIST = [
-    -1001473548283,  # SharingUserbot
-    -1001433238829,  # TedeSupport
-    -1001476936696,  # AnosSupport
-    -1001327032795,  # UltroidSupport
-    -1001294181499,  # UserBotIndo
-    -1001419516987,  # VeezSupportGroup
-    -1001209432070,  # GeezSupportGroup
-    -1001296934585,  # X-PROJECT BOT
-    -1001481357570,  # UsergeOnTopic
-    -1001459701099,  # CatUserbotSupport
-    -1001109837870,  # TelegramBotIndonesia
-    -1001485393652,  # Programmers Hub
-    -1001354786862,  # DaisyXSupport
-    -1001109500936,  # Telethon Chat
-]
+blchat = os.environ.get("GCAST_BLACKLIST") or ""
+
+@zelda_cmd(pattern="blchat$")
+async def sudo(event):
+    blchat = "True" if GCAST_BLACKLIST else "False"
+    blc = blchat
+    if sudo == "True":
+        await edit_or_reply(
+            event,
+            f"🚫 **GCast Blacklist :** `Enabled`\n\n📜 ** Blacklist Group :**\n• `{blc}`\n\n**Kitik `.addbl` di grup untuk menambahkan ke Blacklist.",
+        )
+    else:
+        await edit_delete(event, "🚫 **GCast Blacklis :** `Disabled`")
+
+@zelda_cmd(pattern="addbl(?:\s|$)([\s\S]*)")
+async def add(event):
+    suu = event.text[9:]
+    if f"{cmd}add " in event.text:
+        return
+    xxnx = await edit_or_reply(event, "`Processing...`")
+    var = "GCAST_BLACKLIST"
+    gc = await event.get_chat()
+    if HEROKU_APP_NAME is not None:
+        app = Heroku.app(HEROKU_APP_NAME)
+    else:
+        await edit_delete(
+            xxnx,
+            "**Silahkan Tambahkan Var** `HEROKU_APP_NAME` **untuk menambahkan pengguna sudo**",
+        )
+        return
+    heroku_Config = app.config()
+    if event is None:
+        return
+    if suu:
+        target = gc
+    elif reply:
+        target = await get_chat(event)
+    blchat = f"{GCAST_BLACKLIST} {target}"
+    nenwbl = blchat.replace("{", "")
+    nenwbl = nenwbl.replace("}", "")
+    await xxnx.edit(
+        f"**Berhasil Menambahkan** `{target}` **ke GCast Blacklist.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
+    )
+    heroku_Config[var] = nenwbl
 
 
 @zelda_cmd(pattern="gcast(?: |$)(.*)")
@@ -113,6 +141,18 @@ CMD_HELP.update(
         "gucast": f"**Plugin : **`gucast`\
         \n\n  •  **Syntax :** `{cmd}gucast` <text/reply media>\
         \n  •  **Function : **Mengirim Global Broadcast pesan ke Seluruh Private Massage / PC yang masuk. (Bisa Mengirim Media/Sticker)\
+    "
+    }
+)
+
+CMD_HELP.update(
+    {
+        "gcast_settings": f"**Plugin : **`gcast`\
+        \n\n  •  **Syntax :** `{cmd}blchat`\
+        \n  •  **Function : **Untuk Mengecek informasi Gcast Blacklist.\
+        \n\n  •  **Syntax :** `{cmd}addbl`\
+        \n  •  **Function : **Untuk Menambahkan grup tersebut ke Gcast Blaclist.\
+        \n  •  **Note : **Ketik perintah `{cmd}addbl` di grup yang ingin kamu Blacklist.\
     "
     }
 )
