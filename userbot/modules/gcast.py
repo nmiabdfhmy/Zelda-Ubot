@@ -1,6 +1,7 @@
 import asyncio
 import os
 
+import heroku3
 from telethon.errors import FloodWaitError
 
 from userbot import CMD_HANDLER as cmd
