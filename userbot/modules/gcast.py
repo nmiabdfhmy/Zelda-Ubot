@@ -19,7 +19,7 @@ async def sudo(event):
     if sudo == "True":
         await edit_or_reply(
             event,
-            f"🚫 **GCast Blacklist :** `Enabled`\n\n📜 **Blacklist Group :**\n• `{blc}`\n\nKetik `.addbl` di grup untuk menambahkan ke Blacklist.",
+            f"🚫 **GCast Blacklist :** `Enabled`\n\n📜 ** Blacklist Group :**\n• `{blc}`\n\nKetik `.addbl` di grup untuk menambahkan ke Blacklist.",
         )
     else:
         await edit_delete(event, "🚫 **GCast Blacklis :** `Disabled`")
@@ -29,7 +29,7 @@ async def sudo(event):
 async def add(event):
     xxnx = await edit_or_reply(event, "`Processing...`")
     var = "GCAST_BLACKLIST"
-    gc = await event.get_chat()
+    gc = await event.get_chat_id()
     if HEROKU_APP_NAME is not None:
         app = Heroku.app(HEROKU_APP_NAME)
     else:
@@ -48,6 +48,35 @@ async def add(event):
         f"**Berhasil Menambahkan** `{gc}` **ke GCast Blacklist.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
     )
     heroku_Config[var] = nenwbl
+    
+    
+@zelda_cmd(pattern="delbl(?:\s|$)([\s\S]*)")
+async def _(event):
+	xxx = await edit_or_reply(event, "`Processing...`")
+	gc = await event.get_chat_id()
+	if HEROKU_APP_NAME is not None:
+        app = Heroku.app(HEROKU_APP_NAME)
+    else:
+        await edit_delete(
+            xxx,
+            "**Silahkan Tambahkan Var** `HEROKU_APP_NAME` **untuk menghapus blacklist**",
+        )
+        return
+    heroku_Config = app.config()
+    if event is None:
+        return
+    gett = str(gc)
+    if gett in blchat:
+        nenwbl = blchat.replace(gett, "")
+        await xxx.edit(
+            f"**Berhasil Menghapus** `{gc}` **dari Gcast Blacklist.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
+        )
+        var = "GCAST_BLACKLIST"
+        heroku_Config[var] = nenwbl
+    else:
+        await edit_delete(
+            xxx, "**Group ini tidak ada dalam Daftar Blacklist anda.**", 45
+        )
 
 
 @zelda_cmd(pattern="gcast(?: |$)(.*)")
@@ -133,12 +162,14 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "gcast_settings": f"**Plugin : **`gcast`\
+        "setgcast": f"**Plugin : **`gcast`\
         \n\n  •  **Syntax :** `{cmd}blchat`\
         \n  •  **Function : **Untuk Mengecek informasi Gcast Blacklist.\
         \n\n  •  **Syntax :** `{cmd}addbl`\
         \n  •  **Function : **Untuk Menambahkan grup tersebut ke Gcast Blaclist.\
-        \n  •  **Note : **Ketik perintah `{cmd}addbl` di grup yang ingin kamu Blacklist.\
+        \n\n  •  **Syntax :** `{cmd}delbl`\
+        \n  •  **Function : **Untuk Menghapus grup tersebut dari Gcast Blaclist.\
+        \n  •  **Note : **Ketik perintah** `{cmd}addbl` **dan** `{cmd}delbl` **di grup yang kamu Blacklist.\
     "
     }
 )
