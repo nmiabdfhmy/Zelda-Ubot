@@ -16,7 +16,7 @@ blchat = os.environ.get("GCAST_BLACKLIST") or ""
 async def sudo(event):
     blchat = "True" if GCAST_BLACKLIST else "False"
     blc = blchat
-    if sudo == "True":
+    if blchat == "True":
         await edit_or_reply(
             event,
             f"🚫 **GCast Blacklist :** `Enabled`\n\n📜 ** Blacklist Group :**\n• `{blc}`\n\nKetik `.addblacklist` di grup untuk menambahkan ke Blacklist.",
