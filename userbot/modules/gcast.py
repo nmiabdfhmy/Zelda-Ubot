@@ -16,7 +16,7 @@ blchat = os.environ.get("GCAST_BLACKLIST") or ""
 async def sudo(event):
     blch = "True" if GCAST_BLACKLIST else "False"
     blc = blchat
-    list = f"{blc}\n• "
+    list = f"{blc}"
     if blch == "True":
         await edit_or_reply(
             event,
@@ -48,10 +48,11 @@ async def add(event):
     blcht = nenwbl.replace(",", "")
     gcastblc = blcht.replace("[", "")
     gcid = gcastblc.replace("]", "")
+    gcast_blc = gcid.replace("set()", "")
     await xxnx.edit(
         f"**Berhasil Menambahkan** `{gc}` **ke Daftar GCast Blacklist.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
     )
-    heroku_Config[var] = gcid
+    heroku_Config[var] = gcast_blc
     
     
 @zelda_cmd(pattern="delblacklist(?:\s|$)([\s\S]*)")
