@@ -14,9 +14,9 @@ blchat = os.environ.get("GCAST_BLACKLIST") or ""
 
 @zelda_cmd(pattern="blchat$")
 async def sudo(event):
-    blchat = "True" if GCAST_BLACKLIST else "False"
+    blch = "True" if GCAST_BLACKLIST else "False"
     blc = blchat
-    if blchat == "True":
+    if blch == "True":
         await edit_or_reply(
             event,
             f"🚫 **GCast Blacklist :** `Enabled`\n\n📜 ** Blacklist Group :**\n• `{blc}`\n\nKetik `.addblacklist` di grup untuk menambahkan ke Blacklist.",
@@ -45,7 +45,7 @@ async def add(event):
     nenwbl = blchat.replace("{", "")
     nenwbl = nenwbl.replace("}", "")
     await xxnx.edit(
-        f"**Berhasil Menambahkan** `{gc}` **ke GCast Blacklist.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
+        f"**Berhasil Menambahkan** `{gc}` **ke Daftar GCast Blacklist.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
     )
     heroku_Config[var] = nenwbl
     
@@ -69,7 +69,7 @@ async def _(event):
     if gett in blchat:
         nenwbl = blchat.replace(gett, "")
         await xxx.edit(
-            f"**Berhasil Menghapus** `{gc}` **dari Pengguna Sudo.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
+            f"**Berhasil Menghapus** `{gc}` **dari Daftar GCast Blacklist.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
         )
         var = "GCAST_BLACKLIST"
         heroku_Config[var] = nenwbl
