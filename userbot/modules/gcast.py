@@ -54,7 +54,7 @@ async def add(event):
 async def _(event):
 	xxx = await edit_or_reply(event, "`Processing...`")
 	if HEROKU_APP_NAME is not None:
-        # app = Heroku.app(HEROKU_APP_NAME)
+        app = Heroku.app(HEROKU_APP_NAME)
     else:
         await edit_delete(
             xxx,
