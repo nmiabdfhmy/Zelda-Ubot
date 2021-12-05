@@ -52,8 +52,9 @@ async def add(event):
     
 @zelda_cmd(pattern="delblacklist(?:\s|$)([\s\S]*)")
 async def _(event):
-	  xxx = await edit_or_reply(event, "`Processing...`")
-	  if HEROKU_APP_NAME is not None:
+    xxx = await edit_or_reply(event, "`Processing...`")
+    gc = await event.get_chat_id()
+    if HEROKU_APP_NAME is not None:
         app = Heroku.app(HEROKU_APP_NAME)
     else:
         await edit_delete(
@@ -64,18 +65,17 @@ async def _(event):
     heroku_Config = app.config()
     if event is None:
         return
-    gc = await event.get_chat_id()
     gett = str(gc)
     if gett in blchat:
         nenwbl = blchat.replace(gett, "")
         await xxx.edit(
-            f"**Berhasil Menghapus** `{gc}` **dari Gcast Blacklist.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
+            f"**Berhasil Menghapus** `{gc}` **dari Pengguna Sudo.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
         )
         var = "GCAST_BLACKLIST"
         heroku_Config[var] = nenwbl
     else:
         await edit_delete(
-            xxx, "**Group ini tidak ada dalam Daftar Blacklist anda.**", 45
+            xxx, "**Pengguna ini tidak ada dalam Daftar GCast Blacklist.**", 45
         )
 
 
