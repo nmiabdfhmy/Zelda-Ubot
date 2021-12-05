@@ -29,7 +29,7 @@ async def sudo(event):
 async def add(event):
     xxnx = await edit_or_reply(event, "`Processing...`")
     var = "GCAST_BLACKLIST"
-    gc = await event.get_chat_id()
+    gc = event.chat_id
     if HEROKU_APP_NAME is not None:
         app = Heroku.app(HEROKU_APP_NAME)
     else:
@@ -53,7 +53,7 @@ async def add(event):
 @zelda_cmd(pattern="delblacklist(?:\s|$)([\s\S]*)")
 async def _(event):
     xxx = await edit_or_reply(event, "`Processing...`")
-    gc = await event.get_chat_id()
+    gc = event.chat_id
     if HEROKU_APP_NAME is not None:
         app = Heroku.app(HEROKU_APP_NAME)
     else:
