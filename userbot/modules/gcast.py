@@ -16,7 +16,7 @@ blchat = os.environ.get("GCAST_BLACKLIST") or ""
 async def sudo(event):
     blch = "True" if GCAST_BLACKLIST else "False"
     blc = blchat
-    list = f"{blc}"
+    list = blc.replace(" ", "\n• ")
     if blch == "True":
         await edit_or_reply(
             event,
@@ -48,7 +48,7 @@ async def add(event):
     blcht = nenwbl.replace(",", "")
     gcastblc = blcht.replace("[", "")
     gcid = gcastblc.replace("]", "")
-    gcast_blc = gcid.replace("set()", "")
+    gcast_blc = gcid.replace("set() ", "")
     await xxnx.edit(
         f"**Berhasil Menambahkan** `{gc}` **ke Daftar GCast Blacklist.**\n\nSedang MeRestart Heroku untuk Menerapkan Perubahan."
     )
