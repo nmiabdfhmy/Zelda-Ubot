@@ -19,13 +19,13 @@ async def sudo(event):
     if sudo == "True":
         await edit_or_reply(
             event,
-            f"🚫 **GCast Blacklist :** `Enabled`\n\n📜 ** Blacklist Group :**\n• `{blc}`\n\nKetik `.addbl` di grup untuk menambahkan ke Blacklist.",
+            f"🚫 **GCast Blacklist :** `Enabled`\n\n📜 ** Blacklist Group :**\n• `{blc}`\n\nKetik `.addblacklist` di grup untuk menambahkan ke Blacklist.",
         )
     else:
         await edit_delete(event, "🚫 **GCast Blacklis :** `Disabled`")
         
 
-@zelda_cmd(pattern="addbl(?:\s|$)([\s\S]*)")
+@zelda_cmd(pattern="addblacklist(?:\s|$)([\s\S]*)")
 async def add(event):
     xxnx = await edit_or_reply(event, "`Processing...`")
     var = "GCAST_BLACKLIST"
@@ -50,17 +50,9 @@ async def add(event):
     heroku_Config[var] = nenwbl
     
     
-@zelda_cmd(pattern="delbl(?:\s|$)([\s\S]*)")
+@zelda_cmd(pattern="delblacklist(?:\s|$)([\s\S]*)")
 async def _(event):
 	xxx = await edit_or_reply(event, "`Processing...`")
-	if HEROKU_APP_NAME is not None:
-        app = Heroku.app(HEROKU_APP_NAME)
-    else:
-        await edit_delete(
-            xxx,
-            "**Silahkan Tambahkan Var** `HEROKU_APP_NAME` **untuk menghapus blacklist**",
-        )
-        return
     heroku_Config = app.config()
     if event is None:
         return
@@ -165,11 +157,11 @@ CMD_HELP.update(
         "setgcast": f"**Plugin : **`gcast`\
         \n\n  •  **Syntax :** `{cmd}blchat`\
         \n  •  **Function : **Untuk Mengecek informasi Gcast Blacklist.\
-        \n\n  •  **Syntax :** `{cmd}addbl`\
-        \n  •  **Function : **Untuk Menambahkan grup tersebut ke Gcast Blaclist.\
-        \n\n  •  **Syntax :** `{cmd}delbl`\
-        \n  •  **Function : **Untuk Menghapus grup tersebut dari Gcast Blaclist.\
-        \n  •  **Note : **Ketik perintah** `{cmd}addbl` **dan** `{cmd}delbl` **di grup yang kamu Blacklist.\
+        \n\n  •  **Syntax :** `{cmd}addblacklist`\
+        \n  •  **Function : **Untuk Menambahkan grup tersebut ke Gcast blacklist.\
+        \n\n  •  **Syntax :** `{cmd}delblacklist`\
+        \n  •  **Function : **Untuk Menghapus grup tersebut dari Gcast blacklist.\
+        \n  •  **Note : **Ketik perintah** `{cmd}addblacklist` **dan** `{cmd}delblacklist` **di grup yang kamu Blacklist.\
     "
     }
 )
