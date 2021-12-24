@@ -3,7 +3,7 @@
   "description": "[ZEDA USERBOT] userbot Telegram modular yang berjalan pada Python 3.8+",
   "logo": "https://telegra.ph/file/6a3b3f4992c9fb5084c5e.jpg",
   "keywords": ["telegram", "userbot", "zelda-userbot", "modular", "python"],
-  "repository": "https://github.com/fhmyngrh/Zelda-Ubot",
+  "repository": "https://github.com/fhmyngrh/Zelda-Deploy",
   "stack": "container",
   "env": {
   "ALIVE_NAME": {
@@ -39,7 +39,7 @@
       "required": true
     },
     "BOTLOG_CHATID": {
-      "description": "Buatlah grup telegram publik lalu masukan @MissRose_bot ketik /id, masukan id grup nya disini.",
+      "description": "Buatlah grup lalu masukan @MissRose_bot ketik /id, masukan id grup nya disini.",
       "required": true
     },
     "PM_AUTO_BAN": {
