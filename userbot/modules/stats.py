@@ -1,6 +1,6 @@
 # Copyright (C) 2020 Catuserbot <https://github.com/sandy1709/catuserbot>
 # Ported by @mrismanaziz
-# FROM ZELDA USERBOT <https://github.com/fhmyngrh/ZeldaUbot>
+# FROM ZELDA USERBOT <https://github.com/nmiabdfhmy/Zelda-Ubot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 #
 

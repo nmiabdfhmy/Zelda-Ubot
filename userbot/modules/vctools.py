@@ -5,7 +5,7 @@
 # <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 #
 # Ported by @mrismanaziz
-# FROM ZELDA USERBOT <https://github.com/fhmyngrh/ZeldaUbot>
+# FROM ZELDA USERBOT <https://github.com/nmiabdfhmy/Zelda-Ubot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 #
 # Kalo mau ngecopas, jangan hapus credit ya goblok

@@ -1,5 +1,5 @@
 # Copyright (C) 2021 @mrismanaziz
-# FROM ZELDA USERBOT <https://github.com/fhmyngrh/ZeldaUbot>
+# FROM ZELDA USERBOT <https://github.com/nmiabdfhmy/Zelda-Ubot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
