@@ -1,6 +1,6 @@
 FROM mrismanaziz/man-userbot:buster
 
-RUN git clone -b ZeldaUbot https://github.com/fhmyngrh/ZeldaUbot /home/zeldaubot/ \
+RUN git clone -b Zelda-Ubot https://github.com/fhmyngrh/Zelda-Ubot /home/zeldaubot/ \
     && chmod 777 /home/zeldaubot \
     && mkdir /home/zeldaubot/bin/
 
