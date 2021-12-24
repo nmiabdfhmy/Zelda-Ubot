@@ -16,7 +16,7 @@ async def usit(e):
         f"✣ **Group Support :** [UNREALBABIES](t.me/UnrealBabies)\n"
         f"✣ **Channel :** [Zelda Projects](t.me/zldprojects)\n"
         f"✣ **Owner :** [Lord Zelda](t.me/UnrealZlda)\n"
-        f"✣ **Repo :** [ZELDA USERBOT](https://github.com/fhmyngrh/ZeldaUbot)\n"
+        f"✣ **Repo :** [ZELDA USERBOT](https://github.com/nmiabdfhmy/Zelda-Ubot)\n"
     )
 
 

@@ -1,6 +1,6 @@
 # Coded by KenHV
 # Recode by @mrismanaziz
-# FORM ZELDA USERBOT <https://github.com/fhmyngrh/ZeldaUbot>
+# FORM ZELDA USERBOT <https://github.com/nmiabdfhmy/Zelda-Ubot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 
 from telethon.tl.functions.account import UpdateProfileRequest

@@ -1,6 +1,6 @@
 # Copyright (c) 2021 ZELDA USERBOT
 # Created by mrismanaziz
-# FROM <https://github.com/fhmyngrh/ZeldaUbot>
+# FROM <https://github.com/nmiabdfhmy/Zelda-Ubot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 #
 # Thanks To Ultroid <https://github.com/TeamUltroid/Ultroid>

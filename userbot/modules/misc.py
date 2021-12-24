@@ -6,7 +6,7 @@
 # You can find misc modules, which dont fit in anything xD
 #
 # Recode by @mrismanaziz
-# FROM ZELDA USERBOT <https://github.com/fhmyngrh/ZeldaUbot>
+# FROM ZELDA USERBOT <https://github.com/nmiabdfhmy/Zelda-Ubot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 #
 """ Userbot module for other small commands. """
@@ -88,7 +88,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "**Berikut sesuatu untuk kamu baca:**\n"
-        "\n• [Userbot Repo](https://github.com/fhmyngrh/ZeldaUbot/blob/ZeldaUbot/README.md)"
+        "\n• [Userbot Repo](https://github.com/nmiabdfhmy/Zelda-Ubot/blob/Zelda-Ubot/README.md)"
         "\n• [Video Tutorial](https://youtu.be/tTDaPKsGC1I)"
         "\n• [List Variabel Heroku untuk ZELDA USERBOT](https://telegra.ph/List-Variabel-Heroku-untuk-ZELDA USERBOT-09-22)"
         "\n• [Setup Guide - Basic](https://mrismanaziz.medium.com/cara-memasang-userbot-telegram-repo-man-userbot-deploy-di-heroku-c56d1f8b5537)"
@@ -120,7 +120,7 @@ async def repo_is_here(wannasee):
         f"• **Group Support :** [UNREALBABIES](t.me/UnrealBabies)\n"
         f"• **Channel :** [Zelda Projects](t.me/zldprojects)\n"
         f"• **Owner Repo :** [Lord Zelda](t.me/UnrealZlda)\n"
-        f"• **Repo :** [ZELDA USERBOT](https://github.com/fhmyngrh/ZeldaUbot)\n"
+        f"• **Repo :** [ZELDA USERBOT](https://github.com/nmiabdfhmy/Zelda-Ubot)\n"
     )
 
 
