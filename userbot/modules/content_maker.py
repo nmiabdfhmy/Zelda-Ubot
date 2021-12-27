@@ -10,11 +10,12 @@ async def amireallycontent(content):
     link = str(content.pattern_match.group(1).split(" ", 2)[1])
     capti = capt.replace(".", " ")
     thumb = "https://telegra.ph/file/412f0f8da4a86a6fa75ff.jpg"
-    await asyncio.sleep(2)
+    # await asyncio.sleep(0)
     output = (
         f"**{capti}**\n\n"
         f"⬇️ KLIK UNTUK MENONTON ⬇️\n"
         f"{link}"
+        f"---------------"
     )
     if thumb:
         try:
