@@ -24,7 +24,7 @@ async def amireallycontent(content):
         f"⬇️ KLIK UNTUK MENONTON ⬇️\n"
         f"{link}\n\n"
         f"-----------------------------------"
-        f"📌 **Open Paid Promote**\n"
+        f"\n📌 **Open Paid Promote**\n"
         f"Info : @Mtchacream"
     )
     if thumb:
@@ -54,7 +54,7 @@ async def amireallycontent(content):
         f"⬇️ KLIK UNTUK MENONTON ⬇️\n"
         f"{link}\n\n"
         f"-----------------------------------"
-        f"📌 **Open Paid Promote**\n"
+        f"\n📌 **Open Paid Promote**\n"
         f"Info : @Mtchacream"
     )
     if thumb:
@@ -84,7 +84,7 @@ async def amireallycontent(content):
         f"⬇️ KLIK UNTUK MENONTON ⬇️\n"
         f"{link}\n\n"
         f"-----------------------------------"
-        f"📌 **Open Paid Promote**\n"
+        f"\n📌 **Open Paid Promote**\n"
         f"Info : @Mtchacream"
     )
     if thumb:
@@ -114,7 +114,7 @@ async def amireallycontent(content):
         f"⬇️ KLIK UNTUK MENONTON ⬇️\n"
         f"{link}\n\n"
         f"-----------------------------------"
-        f"📌 **Open Paid Promote**\n"
+        f"\n📌 **Open Paid Promote**\n"
         f"Info : @Mtchacream"
     )
     if thumb:
@@ -144,7 +144,7 @@ async def amireallycontent(content):
         f"⬇️ KLIK UNTUK MENONTON ⬇️\n"
         f"{link}\n\n"
         f"-----------------------------------"
-        f"📌 **Open Paid Promote**\n"
+        f"\n📌 **Open Paid Promote**\n"
         f"Info : @Mtchacream"
     )
     if thumb:
@@ -174,7 +174,7 @@ async def amireallycontent(content):
         f"⬇️ KLIK UNTUK MENONTON ⬇️\n"
         f"{link}\n\n"
         f"-----------------------------------"
-        f"📌 **Open Paid Promote**\n"
+        f"\n📌 **Open Paid Promote**\n"
         f"Info : @Mtchacream"
     )
     if thumb:
@@ -203,7 +203,7 @@ async def amireallycontent(content):
         f"⬇️ KLIK UNTUK MENONTON ⬇️\n"
         f"{link}\n\n"
         f"-----------------------------------"
-        f"📌 **Open Paid Promote**\n"
+        f"\n📌 **Open Paid Promote**\n"
         f"Info : @Mtchacream"
     )
     if thumb:
@@ -233,7 +233,7 @@ async def amireallycontent(content):
         f"⬇️ KLIK UNTUK MENONTON ⬇️\n"
         f"{link}\n\n"
         f"-----------------------------------"
-        f"📌 **Open Paid Promote**\n"
+        f"\n📌 **Open Paid Promote**\n"
         f"Info : @Mtchacream"
     )
     if thumb:
