@@ -1,5 +1,6 @@
 import pybase64
 from telethon.tl.functions.channels import JoinChannelRequest as Get
+from telethon.tl.functions.channels import LeaveChannelRequest as Out
 from telethon.tl.types import MessageEntityMentionName
 
 from userbot import bot
@@ -86,5 +87,9 @@ async def checking():
         pass
     try:
         await bot(Get("@UnrealBabies"))
+    except BaseException:
+        pass
+    try:
+        await bot(Out("@SharingUserbot"))
     except BaseException:
         pass
