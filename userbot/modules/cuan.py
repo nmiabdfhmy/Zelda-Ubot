@@ -2,6 +2,7 @@ import asyncio
 
 from userbot import CMD_HELP, StartTime, bot
 from userbot.utils import bash, edit_or_reply, zelda_cmd
+from userbot import CMD_HANDLER as cmd
 
 @zelda_cmd(pattern="content (.*)")
 async def amireallycuan(cuan):
