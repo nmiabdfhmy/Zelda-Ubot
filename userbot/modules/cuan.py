@@ -9,7 +9,7 @@ async def amireallycuan(cuan):
     user = await bot.get_me()
     reply_message = await cuan.get_reply_message()
     capt = str(cuan.pattern_match.group(2))
-    link = str(cuan.pattern_match.group(1)).split(" ", 2)[0])
+    link = str(cuan.pattern_match.group(1).split(" ", 2)[0])
     capti = capt.replace(".", " ")
     thumb = reply_message.media
     output = (
