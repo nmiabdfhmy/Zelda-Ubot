@@ -1,5 +1,6 @@
 import asyncio
 
+from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, StartTime, bot
 from userbot.utils import bash, edit_or_reply, zelda_cmd
 
