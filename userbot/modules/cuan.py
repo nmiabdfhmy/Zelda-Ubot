@@ -2,14 +2,13 @@ import asyncio
 
 from userbot import CMD_HELP, StartTime, bot
 from userbot.utils import bash, edit_or_reply, zelda_cmd
-from userbot import CMD_HANDLER as cmd
 
 @zelda_cmd(pattern="content (.*)")
 async def amireallycuan(cuan):
     user = await bot.get_me()
     reply_message = await cuan.get_reply_message()
-    capt = str(cuan.pattern_match.group(1).split(" ", 2)[1])
-    link = str(cuan.pattern_match.group(1).split(" ", 2)[0])
+    capt = cuan.pattern_match.group(2)
+    link = cuan.pattern_match.group(1)
     capti = capt.replace(".", " ")
     thumb = reply_message.media
     output = (
