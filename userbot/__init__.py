@@ -5,7 +5,7 @@
 #
 # inline credit @keselekpermen69
 # Recode by @mrismanaziz
-# t.me/zldprojects
+# t.me/ZeldaProjects
 #
 """ Userbot initialization. """
 
@@ -163,9 +163,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/fhmyngrh/ZeldaUbot.git"
+    "UPSTREAM_REPO_URL", "https://github.com/nmiabdfhmy/Zelda-Ubot.git"
 )
-UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "ZeldaUbot")
+UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Zelda-Ubot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -539,7 +539,7 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@zldprojects"):
+            if event.query.user_id == uid and query.startswith("@ZeldaProjects"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=logoman,
@@ -551,14 +551,14 @@ with bot:
                 result = builder.article(
                     title="Repository",
                     description="Repository ZELDA USERBOT",
-                    url="https://t.me/zldprojects",
+                    url="https://t.me/ZeldaProjects",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text="**ZELDA USERBOT**\n• **Owner Repo :** [Lord Zelda](https://t.me/UnrealZelda)\n• **Support :** @zldprojects\n• **Repository :** [ZELDA USERBOT](https://github.com/fhmyngrh/ZeldaUbot)",
+                    text="**ZELDA USERBOT**\n• **Owner Repo :** [Lord Zelda](https://t.me/UnrealZlda)\n• **Support :** @ZeldaProjects\n• **Repository :** [ZELDA USERBOT](https://github.com/nmiabdfhmy/Zelda-Ubot)",
                     buttons=[
                         [
                             custom.Button.url("GROUP CHAT", "https://t.me/UnrealBabies"),
                             custom.Button.url(
-                                "REPO", "https://github.com/fhmyngrh/ZeldaUbot"
+                                "REPO", "https://github.com/nmiabdfhmy/Zelda-Ubot"
                             ),
                         ],
                     ],
@@ -568,14 +568,14 @@ with bot:
                 result = builder.article(
                     title="• ZELDA USERBOT •",
                     description="ZELDA USERBOT | Telethon",
-                    url="https://t.me/zldprojects",
+                    url="https://t.me/ZeldaProjects",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text=f"**ZELDA USERBOT**\n• **UserMode:** [{user.first_name}](tg://user?id={user.id})\n• **Assistant:** {tgbotusername}\n**Support:** @zldprojects",
+                    text=f"**ZELDA USERBOT**\n• **UserMode:** [{user.first_name}](tg://user?id={user.id})\n• **Assistant:** {tgbotusername}\n**Support:** @ZeldaProjects",
                     buttons=[
                         [
                             custom.Button.url("GROUP CHAT", "https://t.me/UnrealBabies"),
                             custom.Button.url(
-                                "REPO", "https://github.com/fhmyngrh/ZeldaUbot"
+                                "REPO", "https://github.com/nmiabdfhmy/Zelda-Ubot"
                             ),
                         ],
                     ],
