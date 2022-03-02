@@ -4,7 +4,7 @@ from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, StartTime, bot
 from userbot.utils import bash, edit_or_reply, zelda_cmd
 
-@zelda_cmd(pattern="content (.*)")
+@zelda_cmd(pattern="content (.*) (.*)")
 async def amireallycuan(cuan):
     user = await bot.get_me()
     reply_message = await cuan.get_reply_message()
