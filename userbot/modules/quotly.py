@@ -1,95 +1,88 @@
-# ReCode by @mrismanaziz
-# FROM ZELDA USERBOT <https://github.com/nmiabdfhmy/Zelda-Ubot>
-# t.me/SharingUserbot & t.me/Lunatic0de
+from os import remove
+from random import choice
 
-import asyncio
-
-from telethon import events
-from telethon.errors.rpcerrorlist import YouBlockedUserError
+from telethon.tl.functions.users import GetFullUserRequest
 
 from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP, bot
-from userbot.events import zelda_cmd
-from userbot.utils import edit_delete, edit_or_reply
+from userbot import CMD_HELP
+from userbot.utils import edit_delete, edit_or_reply, zelda_cmd
+from userbot.utils.misc import create_quotly
+
+from .carbon import all_col
 
 
-@bot.on(zelda_cmd(outgoing=True, pattern=r"q ?(.*)"))
-async def quotess(qotli):
-    if qotli.fwd_from:
-        return
-    if not qotli.reply_to_msg_id:
-        return await qotli.edit("**Mohon Balas Ke Pesan**")
-    reply_message = await qotli.get_reply_message()
-    if not reply_message.text:
-        return await qotli.edit("**Mohon Balas Ke Pesan**")
-    chat = "@QuotLyBot"
-    if reply_message.sender.bot:
-        return await qotli.edit("**Mohon Balas Ke Pesan**")
-    await qotli.edit("**Sedang Memproses Sticker, Mohon Menunggu**")
-    try:
-        async with bot.conversation(chat) as conv:
-            try:
-                response = conv.wait_event(
-                    events.NewMessage(
-                        incoming=True,
-                        from_users=1031952739))
-                msg = await bot.forward_messages(chat, reply_message)
-                response = await response
-                """ - don't spam notif - """
-                await bot.send_read_acknowledge(conv.chat_id)
-            except YouBlockedUserError:
-                return await qotli.reply("**Harap Jangan Blockir @QuotLyBot Buka Blokir Lalu Coba Lagi**")
-            if response.text.startswith("Hi!"):
-                await qotli.reply("**Silahkan Unblock @QuotLyBot dan coba lagi!!**")
+@zelda_cmd(pattern="q( (.*)|$)")
+async def quotly(event):
+    match = event.pattern_match.group(1).strip()
+    if not event.is_reply:
+        return await edit_delete(event, "**Mohon Balas ke Pesan**")
+    msg = await edit_or_reply(event, "`Processing...`")
+    reply = await event.get_reply_message()
+    replied_to, reply_ = None, None
+    if match:
+        spli_ = match.split(maxsplit=1)
+        if (spli_[0] in ["r", "reply"]) or (
+            spli_[0].isdigit() and int(spli_[0]) in range(1, 21)
+        ):
+            if spli_[0].isdigit():
+                if not event.client._bot:
+                    reply_ = await event.client.get_messages(
+                        event.chat_id,
+                        min_id=event.reply_to_msg_id - 1,
+                        reverse=True,
+                        limit=int(spli_[0]),
+                    )
+                else:
+                    id_ = reply.id
+                    reply_ = []
+                    for msg_ in range(id_, id_ + int(spli_[0])):
+                        msh = await event.client.get_messages(event.chat_id, ids=msg_)
+                        if msh:
+                            reply_.append(msh)
             else:
-                await qotli.delete()
-                await bot.forward_messages(qotli.chat_id, response.message)
-                await bot.send_read_acknowledge(qotli.chat_id)
-                """ - cleanup chat after completed - """
-                await qotli.client.delete_messages(conv.chat_id, [msg.id, response.id])                      
-    except TimeoutError:
-        await qotli.edit()
-
-
-@bot.on(zelda_cmd(outgoing=True, pattern=r"qq ?(.*)"))
-async def _(event):
-    if event.fwd_from:
-        return
-    if not event.reply_to_msg_id:
-        await edit_delete(event, "**Mohon Balas ke Pesan**")
-        return
-    reply_message = await event.get_reply_message()
-    warna = event.pattern_match.group(1)
-    chat = "@QuotLyBot"
-    await edit_or_reply(event, "`Processing...`")
-    async with bot.conversation(chat) as conv:
-        try:
-            response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=1031952739)
-            )
-            first = await conv.send_message(f"/qcolor {warna}")
-            ok = await conv.get_response()
-            await asyncio.sleep(2)
-            second = await bot.forward_messages(chat, reply_message)
-            response = await response
-        except YouBlockedUserError:
-            await event.reply("**Silahkan Unblock @QuotLyBot dan coba lagi!!**")
-            return
-        if response.text.startswith("Hi!"):
-            await edit_or_reply(
-                event, "**Mohon Menonaktifkan Pengaturan Privasi Forward Anda**"
-            )
+                replied_to = await reply.get_reply_message()
+            try:
+                match = spli_[1]
+            except IndexError:
+                match = None
+    user = None
+    if not reply_:
+        reply_ = reply
+    if match:
+        match = match.split(maxsplit=1)
+    if match:
+        if match[0].startswith("@") or match[0].isdigit():
+            try:
+                match_ = await event.client(GetFullUserRequest(match[0]))
+                user = await event.client.get_entity(match_)
+            except ValueError:
+                pass
+            match = match[1] if len(match) == 2 else None
         else:
-            await event.delete()
-            await bot.forward_messages(event.chat_id, response.message)
-    await bot.delete_messages(conv.chat_id, [first.id, ok.id, second.id, response.id])
+            match = match[0]
+    if match == "random":
+        match = choice(all_col)
+    try:
+        file = await create_quotly(reply_, bg=match, reply=replied_to, sender=user)
+    except Exception as er:
+        return await msg.edit(f"**ERROR:** `{er}`")
+    message = await reply.reply("Quoted by **Zelda Userbot**", file=file)
+    remove(file)
+    await msg.delete()
+    return message
 
 
 CMD_HELP.update(
     {
         "quotly": f"**Plugin : **`quotly`\
-        \n\n  •  **Syntax :** `{cmd}qq` <warna>\
-        \n  •  **Function : **Membuat pesan mu menjadi sticker bisa custom warna background.\
+        \n\n  •  **Syntax :** `{cmd}q`\
+        \n  •  **Function : **Membuat pesan menjadi sticker dengan random background.\
+        \n\n  •  **Syntax :** `{cmd}q` <angka>\
+        \n  •  **Function : **Membuat pesan menjadi sticker dengan custom jumlah pesan yang diberikan.\
+        \n\n  •  **Syntax :** `{cmd}q` <warna>\
+        \n  •  **Function : **Membuat pesan menjadi sticker dengan custom warna background yang diberikan.\
+        \n\n  •  **Syntax :** `{cmd}q` <username>\
+        \n  •  **Function : **Membuat pesan menjadi sticker dengan custom username user tele yang diberikan.\
     "
     }
 )
