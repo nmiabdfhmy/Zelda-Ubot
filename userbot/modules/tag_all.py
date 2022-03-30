@@ -73,9 +73,9 @@ async def _(event):
                 current_pack = []
 
                 if text:
-                    tags.append("\n\n" + text)
+                    tags.insert(0, text + "\n\n")
 
-                await event.client.send_message(event.chat_id, " ".join(tags))
+                await event.client.send_message(event.chat_id, "".join(tags))
                 await asyncio.sleep(2)
     finally:
         FlagContainer.is_active = False
@@ -116,9 +116,9 @@ async def _(event):
                 jumlah = []
 
                 if text:
-                    tags.append("\n\n" + text)
+                    tags.insert(0, text + "\n\n")
 
-                await event.client.send_message(event.chat_id, " ".join(tags))
+                await event.client.send_message(event.chat_id, "".join(tags))
                 await asyncio.sleep(2)
     finally:
         FlagContainer.is_active = False
