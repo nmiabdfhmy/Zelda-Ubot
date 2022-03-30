@@ -73,7 +73,7 @@ async def _(event):
                 current_pack = []
 
                 if text:
-                    tags.append(text)
+                    tags.append("\n\n" + text)
 
                 await event.client.send_message(event.chat_id, " ".join(tags))
                 await asyncio.sleep(2)
@@ -116,7 +116,7 @@ async def _(event):
                 jumlah = []
 
                 if text:
-                    tags.append(text)
+                    tags.append("\n\n" + text)
 
                 await event.client.send_message(event.chat_id, " ".join(tags))
                 await asyncio.sleep(2)
