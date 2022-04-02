@@ -20,10 +20,7 @@ async def amireallycuan(cuan):
         f"{link}\n\n"
         f"-----------------------------------\n"
         f"📍**LIHAT LEBIH BANYAK :**\n"
-        """✰
-ཱི✰ཻ͜҈   @asupanhypersex
-✰
-ཱི✰ཻ͜҈.  @hyperseexx"""
+        """ཱི✰ཻ͜҈   @asupanhypersex - @hyperseexx"""
     )
     if thumb:
         try:
