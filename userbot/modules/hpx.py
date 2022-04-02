@@ -10,8 +10,8 @@ hpx_thumb = "https://telegra.ph/file/6c06e1d0a0183d0f4da06.jpg"
 async def amireallycuan(cuan):
     user = await bot.get_me()
     reply_message = await cuan.get_reply_message()
-    capt = str(cuan.pattern_match.group(2))
-    link = str(cuan.pattern_match.group(1))
+    capt = str(cuan.pattern_match.group(1).split(" ", 1)[1])
+    link = str(cuan.pattern_match.group(1).split(" ", 2)[0])
     capti = capt.replace(".", " ")
     thumb = hpx_thumb
     output = (
