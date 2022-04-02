@@ -15,12 +15,15 @@ async def amireallycuan(cuan):
     capti = capt.replace(".", " ")
     thumb = hpx_thumb
     output = (
-        f"{capt}\n\n"
-        f"⬇️ **KLIK NOBAR** ⬇️\n"
+        f"✰ {capt}\n\n"
+        f"**LINK NOBAR** 🎞🔞\n"
         f"{link}\n\n"
         f"-----------------------------------\n"
         f"📍**LIHAT LEBIH BANYAK :**\n"
-        "@asupanhypersex\n@hyperseexx"
+        """✰
+ཱི✰ཻ͜҈   @asupanhypersex
+✰
+ཱི✰ཻ͜҈.  @hyperseexx"""
     )
     if thumb:
         try:
