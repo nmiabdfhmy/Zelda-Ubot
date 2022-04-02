@@ -15,7 +15,7 @@ async def amireallycuan(cuan):
     capti = capt.replace(".", " ")
     thumb = hpx_thumb
     output = (
-        f"{**capt**}\n\n"
+        f"**{capt}**\n\n"
         f"⬇️ **KLIK UNTUK MENONTON** ⬇️\n"
         f"{link}\n\n"
         f"**TERVERIFIKASI BERKUALITAS💯**\n"
