@@ -6,7 +6,7 @@ from userbot.utils import bash, edit_or_reply, zelda_cmd
 
 hpx_thumb = "https://telegra.ph/file/6c06e1d0a0183d0f4da06.jpg"
 
-@zelda_cmd(pattern="hpx(.*)")
+@zelda_cmd(pattern="hpx (.*)")
 async def amireallycuan(cuan):
     user = await bot.get_me()
     reply_message = await cuan.get_reply_message()
@@ -16,11 +16,11 @@ async def amireallycuan(cuan):
     thumb = hpx_thumb
     output = (
         f"{capt}\n\n"
-        f"⬇️ **KLIK UNTUK MENONTON** ⬇️\n"
+        f"⬇️ **KLIK NOBAR** ⬇️\n"
         f"{link}\n\n"
-        f"**TERVERIFIKASI BERKUALITAS💯**\n"
         f"-----------------------------------\n"
-        f"📍**LIHAT LEBIH BANYAK :**\n@asupanhypersex\n@hyperseexx"
+        f"📍**LIHAT LEBIH BANYAK :**\n"
+        "@asupanhypersex\n@hyperseexx"
     )
     if thumb:
         try:
