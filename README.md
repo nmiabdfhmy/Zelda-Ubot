@@ -33,7 +33,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 <a href="https://replit.com/@fhmyngrh/Zelda-String-Session"><img src="https://img.shields.io/badge/RUN-Get__String-red?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
 
 ### Deoloy To Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nmiabdfhmy/Zelda-Userbot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nmiabdfhmy/zldadeploy)
 
 ## Updates dan support
 
