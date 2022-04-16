@@ -49,7 +49,7 @@ async def _(event):
     await event.edit("**LU SEMUA NGENTOT 🔥**")
 
 
-@bot.on(zelda_cmd(outgoing=True, pattern=r"ass(?: |$)(.*)"))
+@bot.on(zelda_cmd(outgoing=True, pattern=r"assalam(?: |$)(.*)"))
 async def _(event):
     await event.edit("**Salam Dulu Biar Sopan**")
     sleep(2)
